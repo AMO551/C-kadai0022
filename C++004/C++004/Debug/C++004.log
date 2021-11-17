@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\amo551\Desktop\C++004\C++004\main.cpp(85,16): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\amo551\Desktop\C++004\C++004\main.cpp(86,16): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+  C++004.vcxproj -> C:\Users\amo551\Desktop\C++004\Debug\C++004.exe

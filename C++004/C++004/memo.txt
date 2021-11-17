@@ -1,0 +1,109 @@
+//class Car
+//{
+//public:
+//    Car();
+//    void    SetAcceleration(float _a);
+//    float   GetSpeed() const;
+//
+//    // publicが続くのでアクセス指定子を変更する意味合いはないが、
+//    // 上のブロックがpublicなSet,Getでここからのpublicは処理系を
+//    // まとめたブロックとして分けて見やすくしている。
+//public:
+//    void    Update();
+//
+//private:
+//    void    setSpeed(float _s); // 速度は加速度を用いた計算でのみ変更できるようにしたいので、
+//                                // privateにしておく。
+//private:
+//    float   acceleration;
+//    float   speed;
+//};
+//
+//class PoliceCar : public Car
+//{
+//public:
+//    PoliceCar()
+//    {
+//        sirenFlag = false;
+//    }
+//
+//public:
+//    void SirenOn()
+//    {
+//        sirenFlag = true;
+//        printf("サイレン機能をOnにしました\n");
+//    }
+//    void SirenOff()
+//    {
+//        sirenFlag = false;
+//        printf("サイレン機能をOffにしました\n");
+//    }
+//
+//private:
+//    bool    sirenFlag;
+//};
+//
+//// コンストラクタ
+//Car::Car()
+//{
+//    acceleration = speed = 0.0f;
+//}
+//
+////
+//void Car::SetAcceleration(float _a)
+//{
+//    if (_a < -10 || _a > 5)
+//    {
+//        printf("SetAcceleration Error\n");
+//        return;
+//    }
+//    acceleration = _a;
+//}
+//
+//// 
+//float Car::GetSpeed() const
+//{
+//    return speed;
+//}
+//
+////
+//void Car::Update()
+//{
+//    setSpeed(acceleration);
+//}
+//
+////
+//void Car::setSpeed(float _s)
+//{
+//    float tmpSpeed = speed + _s;
+//    if (tmpSpeed < -30 || tmpSpeed > 200)
+//    {
+//        printf("setSpeed Error.\n");
+//        return;
+//    }
+//    speed = tmpSpeed;
+//}
+//int main()
+//{
+//    PoliceCar policeCar;
+//
+//    policeCar.SirenOn();
+//    policeCar.SirenOff();
+//
+//
+//    // もちろんCarの機能もすべて使える 
+//    policeCar.SetAcceleration(1.0f);
+//
+//    for (int i = 0; i < 100; ++i)
+//    {
+//        policeCar.Update();
+//        printf("Speed = %f\n", policeCar.GetSpeed());
+//    }
+//    policeCar.SetAcceleration(-0.1f);
+//
+//    for (int i = 0; i < 100; ++i)
+//    {
+//        policeCar.Update();
+//        printf("Speed = %f\n", policeCar.GetSpeed());
+//    }
+//}
